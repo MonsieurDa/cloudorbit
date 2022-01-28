@@ -85,9 +85,9 @@ jobs:
 
     # Provision resources via Terraform        
     - name: Terraform Apply
-      run: |-
-        # terraform apply
-        chmod +x "${GITHUB_WORKSPACE}/.github/workflows/tf_init.sh"
-        "${GITHUB_WORKSPACE}/.github/workflows/tf_init.sh"
-        terraform show "tf_plan"
-        terraform apply "tf_plan"
+      run: |
+        terraform apply
+        #chmod +x "${GITHUB_WORKSPACE}/.github/workflows/tf_init.sh"
+        #"${GITHUB_WORKSPACE}/.github/workflows/tf_init.sh"
+        #terraform show "tf_plan"
+        #terraform apply "tf_plan"
