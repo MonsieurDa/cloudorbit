@@ -1,5 +1,5 @@
 terraform {
   backend "gcs" {
-    bucket = "gcp-deploy-terraform2"
+    bucket = "gcp-deploy-terraform"
   }
 }
