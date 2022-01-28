@@ -65,8 +65,8 @@ jobs:
     needs: terraform_plan
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
 
-    environment:
-      name: tf_apply
+    #environment:
+    #  name: tf_apply
     
     steps: 
     - name: Checkout
