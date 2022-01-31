@@ -11,6 +11,8 @@
 
 * 3 - Create a bucket to store terraform state files
 
-* 4 - Cloud Resource Manager API
+* 4 - Enable Cloud Resource Manager API
+
+* 5 - Enable Identity and Access Management (IAM) API
 
 ### PS: Github actions is used to automate the continous integration (C.I)
