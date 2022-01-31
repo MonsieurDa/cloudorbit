@@ -1,4 +1,4 @@
-name: terraform-automation
+name: deploy_gcp_terraform_module
 
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
@@ -10,7 +10,7 @@ on:
     - 'infra/environments/dv/**'
 
 concurrency: 
-  group: ${{ github.action == 'terraform-automation' }}
+  group: ${{ github.action == 'deploy_gcp_terraform_module' }}
   cancel-in-progress: true
 
 defaults:
