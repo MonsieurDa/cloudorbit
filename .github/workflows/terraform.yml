@@ -7,7 +7,7 @@ on:
   pull_request:
     branches: [ master ]
     paths:
-    - 'examples/**'
+    - 'terraform/environments/dv/**'
 
 concurrency: 
   group: ${{ github.action == 'terraform-automation' }}
@@ -16,7 +16,7 @@ concurrency:
 defaults:
   run:
     shell: bash
-    working-directory: ./examples
+    working-directory: ./terraform/environments/dv
 
 jobs:
   terraform_plan:
@@ -52,7 +52,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: tf_plan
-          path: ./examples/tf_plan
+          path: ./terraform/environments/dv/tf_plan
           if-no-files-found: error
           retention-days: 1
 
@@ -80,7 +80,7 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: tf_plan
-        path: ./examples
+        path: ./terraform/environments/dv
 
     # Provision resources via Terraform        
     - name: Terraform Apply
